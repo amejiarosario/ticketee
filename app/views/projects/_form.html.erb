@@ -1,0 +1,7 @@
+<%= form_for @project do |f| %>
+	<p>
+		<%= f.label :name, "Project Name:" %>
+		<%= f.text_field :name %>
+	</p>
+	<%= f.submit "Create Project" %>
+<% end %>
