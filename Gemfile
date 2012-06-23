@@ -47,6 +47,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'launchy'
   #gem 'turn', :require => false
 end
 
