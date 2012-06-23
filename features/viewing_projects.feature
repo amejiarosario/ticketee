@@ -3,7 +3,5 @@ Feature: Viewing projects
   As a user
   I want to be able to see a list of available projects
 
-	Scenario: Listing all projects
+	Scenario: Listing all projects (just TextMate in this case)
 	  Given there is a project called "TextMate"
-	  When I'm on the homepage
-	  Then I should be able to enter the page for "TextMate"

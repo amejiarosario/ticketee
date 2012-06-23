@@ -1,4 +1,3 @@
-@wip
 Feature: Deleting projects
   In order to remove projects
   As a project manager
@@ -7,7 +6,7 @@ Feature: Deleting projects
 	Scenario: Deleting a project
 	  Given there is a project called "TextMate"
 	  When I delete the project
-	  Then I should see "the project has been deleted."
+	  Then I should see "Project has been deleted."
 	
 	
 	
