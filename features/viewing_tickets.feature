@@ -10,17 +10,17 @@ Feature: Viewing tickets
 		 | title          | description           |
 		 | Make it shiny! | Gradients! Starburst! |
 		And there is a project called "Internet Explorer"
-		And that ticket project has a ticket:
+		And that project has a ticket:
 		 | title          | description             |
 		 | Non-compilance | Y U No follow the rulz? |
-		And I am on the homepage
+		And I'm on the homepage
 		
 	Scenario: Viewing the tickets for a given project
 	  When I follow "TextMate"
 	  Then I should see "Make it shiny!"
 		And I should not see "Non-compilance"
 		When I follow "Make it shiny"
-		Then I should see "Make it Shiny" within "#ticket h2"
+		Then I should see "Make it shiny!" within "#ticket h2"
 		And I should see "Gradients! Starburst!"
 		
 	  When I follow "Ticketee"
