@@ -32,3 +32,17 @@ When /^I delete the project$/ do
   click_on "Delete Project"
 end
 
+### Tickets
+
+Given /^I follow "(.*?)"$/ do |link|
+  click_on link
+end
+
+When /^I fill in "(.*?)" with "(.*?)"$/ do |arg1, arg2|
+  fill_in arg1, with: arg2
+end
+
+When /^I create the ticket$/ do
+  click_on "New Ticket"
+  #page.should have_content "Ticket has been created"
+end
