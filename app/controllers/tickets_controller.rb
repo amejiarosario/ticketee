@@ -9,6 +9,21 @@ class TicketsController < ApplicationController
   def show
   end
   
+  def edit
+  end
+  
+  def update
+    logger.info "------ ** "
+    if @ticket.update_attributes(params[:ticket])
+      logger.info "** ------"
+      redirect_to [@project, @ticket], notice: "Ticket has been created."
+    else
+      logger.info "** the else ------"
+      flash.now[:alert] = "Ticket has not been updated."
+      render action: "edit"
+    end
+  end
+  
   def create
     @ticket = @project.tickets.build(params[:ticket])
     if @ticket.save

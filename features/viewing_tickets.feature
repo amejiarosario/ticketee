@@ -1,4 +1,3 @@
-@wip
 Feature: Viewing tickets
   In order to view the tickets for projects
   As a user

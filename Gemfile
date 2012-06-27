@@ -40,6 +40,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
+  gem 'rails-footnotes', '>= 3.7.5.rc4'
 end
 
 group :test do
