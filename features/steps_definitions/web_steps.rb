@@ -42,7 +42,7 @@ World(WithinHelpers)
 
 # Single-line step scoper
 When /^(.*) within (.*[^:])$/ do |the_step, parent|
-  with_scope(parent) { step thestep }
+  with_scope(parent) { step the_step }
 end
 
 # Multi-line step scoper
