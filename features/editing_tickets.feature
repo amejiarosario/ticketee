@@ -1,4 +1,3 @@
-@wip
 Feature: Editing tickets
   In order to alter ticket information
   As a user
