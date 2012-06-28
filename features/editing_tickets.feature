@@ -3,15 +3,19 @@ Feature: Editing tickets
   As a user
   I want a form to edit the tickets
 
-	Background:
-		Given there is a project called "TextMate"
-		And that project has a ticket:
-		 | title         | description |
-		 | make it shiny | gradients and stuff   |
-		Given I am on the homepage
-		When I follow "TextMate"
-		And I follow "make it shiny"
-		When I follow "Edit Ticket"
+		Background:
+			Given there are the following users:
+			 | email             | password |
+			 | user@ticketee.com | password |
+			And I am signed as them
+			Given there is a project called "TextMate"
+			And "user@ticketee.com" has created a ticket for this project:
+			 | title         | description         |
+			 | make it shiny | gradients and stuff |
+			Given I am on the homepage
+			When I follow "TextMate"
+			And I follow "make it shiny"
+			When I follow "Edit Ticket"
 		
 		Scenario: Updating a ticket
 		  When I fill in "Title" with "make it really shiny"

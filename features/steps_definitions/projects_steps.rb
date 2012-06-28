@@ -59,3 +59,23 @@ Given /^that project has a ticket:$/ do |table|
     @project.tickets.create!(attr)
   end
 end
+
+
+Given /^I am signed as them$/ do
+  steps(%Q{
+    Given I am on the homepage
+    When I follow "Sign in"
+    And I fill in "Email" with "#{@user.email}"
+    And I fill in "Password" with "password"
+    And I press "Sign in"
+    Then I should see "Signed in successfully."
+  })
+end
+
+Given /^"(.*?)" has created a ticket for this project:$/ do |email, table|
+  # table is a Cucumber::Ast::Table
+  @user = User.find_by_email!(email)
+  table.hashes.each do |a|
+    @project.tickets.create!(a.merge!(user: @user))
+  end
+end
