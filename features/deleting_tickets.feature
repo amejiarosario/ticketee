@@ -1,4 +1,3 @@
-@wip
 Feature: Deleting tickets
   In order to remove tickets
   As a user
