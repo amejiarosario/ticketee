@@ -47,7 +47,7 @@ end
 # end
 
 When /^I create the ticket$/ do
-  click_on "New Ticket"
+  click_on "Save Ticket"
   #page.should have_content "Ticket has been created"
 end
 
