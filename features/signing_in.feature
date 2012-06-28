@@ -4,7 +4,7 @@ Feature: Signing in
   I want to be able to sign in
 
   Scenario: Signing in via confirmation
-    Given the are the following users:	
+    Given there are the following users:	
 		 | email      | password |
 		 | user@t.tt  | password |
 		 | user2@a.jp | password |
