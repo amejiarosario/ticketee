@@ -7,8 +7,3 @@ Feature: Deleting projects
 	  Given there is a project called "TextMate"
 	  When I delete the project
 	  Then I should see "Project has been deleted."
-	
-	
-	
-
-  
