@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Admin::UserController do
+describe Admin::UsersController do
 	let(:user) do
 		user = create(:user)
 		user.confirm!
@@ -17,7 +17,6 @@ describe Admin::UserController do
 			response.should redirect_to(root_path)
 			flash[:alert].should eql("You must be an admin to do that.")
 		end
-
 	end
 
 end

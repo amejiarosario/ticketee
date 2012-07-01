@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe ProjectsController do
-  let :user do
-  	user = create(:user)
-  	user.confirm!
-  	user
-  end
+  let(:user){ create_user! }
 
   let(:project){ create(:project) }
 

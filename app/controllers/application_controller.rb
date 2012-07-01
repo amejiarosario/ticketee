@@ -7,9 +7,10 @@ class ApplicationController < ActionController::Base
 
   	def authorize_admin!
   		authenticate_user!
-  		# unless current_user.admin?
-  		# 	flash[:alert] = "You must be an admin to do that."
-  		# 	redirect_to root_path
-  		# end
+  		# TODO review is failing with cucumber tests
+      unless current_user.admin?
+  			flash[:alert] = "You must be an admin to do that."
+  			redirect_to root_path
+  		end
   	end
 end
