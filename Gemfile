@@ -53,4 +53,4 @@ group :test do
   #gem 'turn', :require => false
 end
 
-gem 'devise'
+gem 'devise', '>= 2.0.0'

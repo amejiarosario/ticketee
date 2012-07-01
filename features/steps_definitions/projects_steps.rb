@@ -61,7 +61,7 @@ Given /^that project has a ticket:$/ do |table|
 end
 
 
-Given /^I am signed as them$/ do
+Given /^I am signed in as them$/ do
   steps(%Q{
     Given I am on the homepage
     When I follow "Sign in"
@@ -79,3 +79,22 @@ Given /^"(.*?)" has created a ticket for this project:$/ do |email, table|
     @project.tickets.create!(a.merge!(user: @user))
   end
 end
+
+### Links steps
+
+Given /^I am signed in as "([^\"]*)"$/ do |email|
+  @user = User.find_by_email!(email)
+  steps "Given I am signed in as them"
+end
+
+Then /^I should see the "([^\"]*)" link$/ do |text|
+  page.should(have_css("a", :text => text), 
+    "Expected to see the #{text.inspect} link, but did not.")
+end
+    
+Then /^I should not see the "([^\"]*)" link$/ do |text|
+  page.should_not(have_css("a", :text => text),
+    "Expected to not see the #{text.inspect} link, but did.")
+end
+
+

@@ -7,7 +7,7 @@ Feature: Editing tickets
 		Given there are the following users:
 		 | email             | password |
 		 | user@ticketee.com | password |
-		And I am signed as them
+		And I am signed in as them
 		Given there is a project called "TextMate"
 		And "user@ticketee.com" has created a ticket for this project:
 		 | title         | description         |

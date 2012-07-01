@@ -7,7 +7,7 @@ Feature: Creating projects
 		Given there are the following users:
       | email             | password | admin |
       | admin@ticktee.com | password | true  |
-		And I am signed as them
+		And I am signed in as them
 		Given I'm on the homepage
 
 	Scenario: Create a project called TexMate
