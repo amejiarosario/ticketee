@@ -229,4 +229,12 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = "/my_engine/users/auth"
+
+
+  # Speed up your unit tests # https://github.com/plataformatec/devise/wiki/Speed-up-your-unit-tests
+  config.stretches = Rails.env.test? ? 1 : 10
+
+  # Test with Cucumber # https://github.com/plataformatec/devise/wiki/How-To:-Test-with-Cucumber
+  config.sign_out_via = Rails.env.test? ? :get : :delete
+
 end
