@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :project do
-    name 'Ticketee'
+    sequence(:name){|n| "project_name##{n}" }
   end
 
   factory :user do
