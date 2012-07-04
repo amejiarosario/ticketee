@@ -17,7 +17,7 @@ class TicketsController < ApplicationController
     logger.info "------ ** "
     if @ticket.update_attributes(params[:ticket])
       logger.info "** ------"
-      redirect_to [@project, @ticket], notice: "Ticket has been created."
+      redirect_to [@project, @ticket], notice: "Ticket has been updated."
     else
       logger.info "** the else ------"
       flash.now[:alert] = "Ticket has not been updated."

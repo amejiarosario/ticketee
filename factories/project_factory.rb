@@ -2,32 +2,4 @@ FactoryGirl.define do
   factory :project do
     sequence(:name){|n| "project_name##{n}" }
   end
-
-  factory :user do
-  	sequence(:email){|n| "user#{n}@ticketee.com" }
-  	password "password"
-  	password_confirmation "password" 
-  	
-    factory :confirmed_user do
-      after :create  do |user|
-        user.confirm!
-      end
-    end
-
-    factory :admin_user do
-      after :create do |user|
-        user.confirm!
-        user.update_attribute(:admin, true)
-      end
-    end
-
-  	factory :admin do
-  		admin true
-  	end
-  end
-
-  # sequence :email do |n|
-  #   "email#{n}@factory.com"
-  # end
-
 end
