@@ -41,4 +41,7 @@ RSpec.configure do |config|
   # Helpers
   config.include SeedHelpers
 
+  # Email Spec
+  config.include EmailSpec::Helpers
+
 end
