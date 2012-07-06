@@ -1,8 +1,12 @@
 <div id="ticket">
 	<h2><%= @ticket.title %></h2>
-	<% unless @ticket.user.nil? %>
-		<br><small>Created by <%= @ticket.user.email %></small>
-	<% end %>
+	
+	<br><span id='author'>Created by
+		<% unless @ticket.user.nil? %>
+			<%= @ticket.user.email %>
+		<% end %>
+	</span>
+
 	<%= simple_format @ticket.description %>
 	
 	<%= link_to "Edit Ticket", [:edit, @project, @ticket] %>

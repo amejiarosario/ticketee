@@ -27,6 +27,7 @@ class TicketsController < ApplicationController
   
   def create
     @ticket = @project.tickets.build(params[:ticket].merge!(:user => current_user))
+    @ticket.user = current_user
     if @ticket.save
       redirect_to [@project, @ticket], notice: "Ticket has been created."
     else
