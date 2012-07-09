@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-u = User.new(email: "root@ticketee.com", password: "123456")
+u = User.new(email: "root@ticketee.com", password: "123456", admin: true)
 u.confirm!
 u.save

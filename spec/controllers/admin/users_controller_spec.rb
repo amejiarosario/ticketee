@@ -12,5 +12,4 @@ describe Admin::UsersController do
 			flash[:alert].should eql("You must be an admin to do that.")
 		end
 	end
-
 end
