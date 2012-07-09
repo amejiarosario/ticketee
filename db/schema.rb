@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120630220223) do
   end
 
   add_index "tickets", ["project_id"], :name => "index_tickets_on_project_id"
+  add_index "tickets", ["user_id"], :name => "index_tickets_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false
