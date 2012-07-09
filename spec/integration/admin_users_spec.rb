@@ -33,7 +33,7 @@ feature "Creating Users" do
     click_button "Create User"
     page.should have_content("User has been created")
     within("#users") do
-      page.should have_content("admin@example.com")
+      page.should have_content("admin@example.com (Admin)")
     end
   end  
 end

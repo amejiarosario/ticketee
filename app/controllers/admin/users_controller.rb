@@ -15,7 +15,7 @@ class Admin::UsersController < ApplicationController
 	    redirect_to admin_users_path, notice: "User has been created."
 	  else
 	  	flash.now[:alert] = "User has not been created."
-	    render :action => "new"
+	    render action: "new"
 	  end
 	end
 
